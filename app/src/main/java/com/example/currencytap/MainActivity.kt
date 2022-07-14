@@ -72,7 +72,7 @@ fun MyApp() {
 
             Spacer(modifier = Modifier.height(80.dp))
 
-            if (moneyCounter.value < 1500) {
+            if (moneyCounter.value > 1500) {
                 Text(
                     text = "Lots of Money. !", style = TextStyle(
                         color = Color.Cyan,
@@ -80,7 +80,7 @@ fun MyApp() {
                         fontWeight = FontWeight.Bold
                     )
                 )
-            } else if (moneyCounter.value < 2500) {
+            } else {
                 Text(
                     text = "gonna Be Super Rich $$$$",
                     style = TextStyle(
@@ -88,17 +88,7 @@ fun MyApp() {
                         fontSize = 16.sp,
                     )
                 )
-            }else
-            when {
-                moneyCounter.value > 2500 -> Text(text = "GONNA! Be Super Rich $$$$")
-                moneyCounter.value > 3000 -> Text(text = "getting there 2500$")
-                moneyCounter.value > 3500 -> Text("it's Hard But only 3000$")
-                moneyCounter.value > 4500 -> Text("okay it's a Lot Of money but still poor 3500$")
-                moneyCounter.value > 5500 -> Text("Congratulation You have made it $$$ you are super Wealthy 5000$")
-
-
             }
-
 
         }
     }
@@ -138,3 +128,36 @@ fun DefaultPreview() {
     MyApp()
 
 }
+
+
+@Composable
+fun Home() {
+    Column(
+        modifier = Modifier,
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
